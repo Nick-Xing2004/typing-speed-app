@@ -7,7 +7,7 @@ const useTypings = (enabled: boolean) => {
   const [typed, setTyped] = useState<string>("");    
   const totalTyped = useRef(0);
 
-  const keydownHandler = ({ key, code }: KeyboardEvent) => {
+  const keydownHandler = ({key, code}: KeyboardEvent) => {
       if (!enabled || !isKeyboardCodeAllowed(code)) {  
         return;     
       }
